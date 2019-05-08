@@ -1,9 +1,10 @@
 language: c
 sudo: false # only for faster builds
-compiler:
- - gcc
+compiler:-clang
 script:
- - gcc -o file1 file1.c // we can use gcc instead of clang too
- - ./file1
- - gcc -o file2 file2.c // we can use gcc instead of clang too
- - ./file1
+  - clang -coverage -O0 file1.c -o file1
+  - ./file1
+  - gcov file1.c
+  - clang -coverage -O0 file2.c -o file2
+  - ./file2
+  - gcov file2.c
