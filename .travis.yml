@@ -3,7 +3,5 @@ sudo: false # only for faster builds
 script:
   - clang -coverage -O0 file1.c -o file1
   - ./file1
-  - gcov file1.c
   - clang -coverage -O0 file2.c -o file2
   - ./file2
-  - gcov file2.c
