@@ -4,9 +4,6 @@ script:
   - clang -coverage -O0 file1.c -o file1
   - ./file1
   - gcov file1.c
-  - clang -coverage -O0 file2_rev_no.c -o file2_rev_no
-  - ./file2_rev_no
-  - gcov file2_rev_no.c
-
-after_success:
-  - bash <(curl -s https://codecov.io/bash)
+  - clang -coverage -O0 file2.c -o file2
+  - ./file2
+  - gcov file2.c
