@@ -1,7 +1,6 @@
 language: c
 sudo: false # only for faster builds
 compiler:
- - clang
  - gcc
 script:
  - gcc -o file1 file1.c // we can use gcc instead of clang too
