@@ -1,6 +1,5 @@
 language: c
 sudo: false # only for faster builds
-compiler:-clang
 script:
   - clang -coverage -O0 file1.c -o file1
   - ./file1
