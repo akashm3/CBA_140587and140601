@@ -1,33 +1,18 @@
 #include <stdio.h>
 int main()
 {
-    int n, i, flag = 0;
+    int i, j, rows;
 
-    printf("Enter a positive integer: ");
-    scanf("%d", &n);
+    printf("Enter number of rows: ");
+    scanf("%d",&rows);
 
-    for(i = 2; i <= n/2; ++i)
+    for(i=1; i<=rows; ++i)
     {
-        // condition for nonprime number
-        if(n%i == 0)
+        for(j=1; j<=i; ++j)
         {
-            flag = 1;
-            break;
+            printf("* ");
         }
+        printf("\n");
     }
-
-    if (n == 1) 
-    {
-      printf("1 is neither a prime nor a composite number.");
-      //printf("\n");
-    }
-    else 
-    {
-        if (flag == 0)
-          printf("%d is a prime number.", n);
-        else
-          printf("%d is not a prime number.", n);
-    }
-    
     return 0;
 }
