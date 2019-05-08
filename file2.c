@@ -1,18 +1,27 @@
 #include <stdio.h>
+ 
 int main()
 {
-    int i, j, rows;
-
-    printf("Enter number of rows: ");
-    rows=4;
+  int row, c, n, s;
+ 
+  printf("Enter the number of rows in pyramid of stars you wish to see\n");
+  //scanf("%d", &n);
+  n=6;
+ 
+  s = n;
+ 
+  for (row = 1; row <= n; row++)  // Loop to print rows
+  {
+    for (c = 1; c < s; c++)  // Loop to print spaces in a row
+      printf(" ");
+ 
+    s--;
+ 
+    for (c = 1; c <= 2*row - 1; c++) // Loop to print stars in a row
+      printf("*");
+ 
     printf("\n");
-    for(i=1; i<=rows; ++i)
-    {   printf("\n");
-        for(j=1; j<=i; ++j)
-        {
-            printf("* ");
-        }
-        printf("\n");
-    }
-    return 0;
+  }
+ 
+  return 0;
 }
